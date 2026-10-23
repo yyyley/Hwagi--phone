@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>捡手机模拟器｜星旼秘密恋爱档案</title>
+<style>
+:root{--ink:#fff;--glass:rgba(255,255,255,.16);--line:rgba(255,255,255,.2);--muted:rgba(255,255,255,.68);--yellow:#fee500;--pink:#ff5aa5}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#10111a;color:var(--ink);-webkit-tap-highlight-color:transparent}button,input{font:inherit}button{border:0;cursor:pointer;color:inherit}.phone{position:relative;width:100%;height:100dvh;overflow:hidden;background:#161824;isolation:isolate}.wallpaper{position:absolute;inset:0;background:linear-gradient(145deg,#19172e,#6e476e 48%,#e5a7a0);z-index:-2}.wallpaper:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 20%,rgba(255,235,226,.7),transparent 27%),radial-gradient(circle at 15% 75%,rgba(114,143,205,.7),transparent 35%),linear-gradient(135deg,rgba(15,20,45,.3),transparent)}.wallpaper:after{content:"";position:absolute;inset:0;backdrop-filter:blur(1px);background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.18))}.status{position:absolute;top:env(safe-area-inset-top,12px);left:0;right:0;height:28px;padding:0 24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;z-index:30}.screen{position:absolute;inset:0;display:none;overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 42px) 20px calc(env(safe-area-inset-bottom,0px) + 30px)}.screen.active{display:block}.lock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding-top:calc(env(safe-area-inset-top,0px) + 70px);text-shadow:0 2px 18px #333}.lock .date{font-size:16px;margin-top:8px}.lock .clock{font-size:78px;font-weight:200;letter-spacing:-4px;line-height:1.05}.lock .locknote{margin-top:35px;padding:12px 18px;border-radius:20px;background:rgba(255,255,255,.18);backdrop-filter:blur(18px);font-size:13px}.unlock{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);left:0;right:0;text-align:center;font-size:12px;color:#fff}.home{padding:calc(env(safe-area-inset-top,0px) + 48px) 18px calc(env(safe-area-inset-bottom,0px) + 100px)}.widgets{display:grid;grid-template-columns:1fr 1fr;gap:12px}.widget{min-height:112px;border:1px solid var(--line);border-radius:24px;padding:14px;background:rgba(255,255,255,.17);backdrop-filter:blur(22px);box-shadow:0 10px 30px #17172b22}.widget small{color:var(--muted)}.temp{font-size:30px;font-weight:600;margin:4px 0}.event{font-size:12px;margin-top:8px;display:flex;gap:8px}.apps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:21px 10px;margin-top:30px}.app{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;min-width:0}.app-icon{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;font-size:29px;box-shadow:0 7px 20px #0002;background:linear-gradient(145deg,#fff8,#ffffff25);border:1px solid #ffffff35}.app span:last-child{font-size:11px;text-shadow:0 1px 5px #222;white-space:nowrap}.kakao{background:#fee500;color:#3d3420}.instagram{background:linear-gradient(135deg,#7857d8,#e13d84,#f9a34b)}.xapp{background:#050505}.weverse{background:#7c69ff}.fromm{background:#f0b7c8;color:#6d2945}.phoneapp{background:#34c759}.dock{position:absolute;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);height:78px;border:1px solid #ffffff3b;border-radius:26px;background:rgba(255,255,255,.2);backdrop-filter:blur(25px);display:flex;align-items:center;justify-content:space-evenly;z-index:10}.dock .app-icon{width:51px;height:51px}.homebar{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 7px);left:50%;transform:translateX(-50%);width:112px;height:5px;border-radius:8px;background:#fff;z-index:40;cursor:pointer}.appscreen{background:rgba(248,248,252,.98);color:#17171b;padding-left:0;padding-right:0}.appscreen.dark{background:#050505;color:white}.apphead{padding:0 20px 15px;display:flex;align-items:center;justify-content:space-between;font-weight:750;font-size:23px}.subtle{color:#888;font-size:13px}.profile-row{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid #eee}.avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#dca5b7,#6b628d);color:white;font-weight:700;flex-shrink:0;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}.rows{padding:0 20px}.rowitem{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #ececf0}.rowitem .grow{flex:1;min-width:0}.rowitem strong{font-size:15px}.rowitem p{margin:4px 0 0;color:#777;font-size:12px}.pill{padding:5px 9px;border-radius:15px;background:#eee;color:#555;font-size:11px}.bottomtabs{position:absolute;bottom:0;left:0;right:0;height:64px;padding-bottom:env(safe-area-inset-bottom,0px);display:flex;align-items:center;justify-content:space-around;background:#fff;border-top:1px solid #e5e5e8;color:#777;font-size:11px}.bottomtabs span{text-align:center}.bottomtabs b{display:block;font-size:20px;margin-bottom:2px}.chat-screen{background:#bacedb;padding-bottom:80px}.chat-top{display:flex;align-items:center;gap:12px;padding:0 18px 14px;font-size:17px;font-weight:700}.messages{padding:10px 15px;display:flex;flex-direction:column;gap:14px}.bubble-wrap{align-self:flex-end;max-width:83%;display:flex;align-items:flex-end;gap:5px}.bubble{background:#fee500;color:#242424;padding:11px 13px;border-radius:16px 4px 16px 16px;font-size:14px;line-height:1.4;box-shadow:0 1px 2px #0001}.meta{font-size:9px;color:#4f5b63;white-space:nowrap}.chat-input{position:absolute;bottom:0;left:0;right:0;display:flex;gap:8px;padding:10px 12px calc(env(safe-area-inset-bottom,0px) + 12px);background:#f7f7f7}.chat-input input{flex:1;min-width:0;border:0;background:white;border-radius:20px;padding:12px;color:#222;outline:none}.send{background:#fee500;color:#333;border-radius:20px;padding:0 17px;font-weight:700}.tweet{display:flex;gap:12px;padding:16px 18px;border-bottom:1px solid #242424}.tweetbody{flex:1;min-width:0}.tweethead{font-size:13px;color:#888;margin-bottom:7px}.tweethead strong{color:#fff}.tweettext{font-size:14px;line-height:1.55;white-space:pre-wrap}.engage{display:flex;justify-content:space-between;color:#777;font-size:11px;margin-top:12px;max-width:300px}.community-card{margin:12px 16px;padding:15px;border-radius:18px;background:#fff;border:1px solid #eee}.community-card p{font-size:14px;line-height:1.5}.postfoot{color:#888;font-size:12px;display:flex;gap:20px}.calllist .rowitem{padding:16px 0}.missed{color:#ff3b30!important}.call-overlay,.video-call{position:absolute;inset:0;background:#08090d;z-index:60;display:none;color:#fff}.call-overlay.show,.video-call.show{display:flex}.call-overlay{flex-direction:column;align-items:center;text-align:center;padding:calc(env(safe-area-inset-top,0px) + 95px) 20px calc(env(safe-area-inset-bottom,0px) + 65px)}.caller-avatar{width:118px;height:118px;border-radius:50%;background:linear-gradient(135deg,#c7a0d6,#5b668b);display:grid;place-items:center;font-size:40px;font-weight:700;animation:breathe 2s infinite}.caller-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}@keyframes breathe{50%{transform:scale(1.06);box-shadow:0 0 0 16px #ffffff0a}}.call-overlay h2{font-size:24px;margin:22px 0 6px}.call-overlay p{color:#aaa;margin:4px}.call-actions{margin-top:auto;width:100%;display:flex;justify-content:space-around}.round{width:64px;height:64px;border-radius:50%;font-size:25px;display:grid;place-items:center}.hang{background:#ff453a}.answer{background:#30d158}.video-call{overflow:hidden;flex-direction:column;justify-content:space-between;background:linear-gradient(140deg,#352c4d,#171820 45%,#6b4a62)}.video-backdrop{position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,#b58dba88,transparent 35%),linear-gradient(150deg,#252039,#71536a);z-index:0}.video-head,.video-controls,.floatmsgs,.message-send,.selfview{position:relative;z-index:2}.video-head{text-align:center;padding-top:calc(env(safe-area-inset-top,0px) + 25px);text-shadow:0 2px 8px #000}.video-head strong{display:block;font-size:18px}.selfview{position:absolute;right:16px;top:calc(env(safe-area-inset-top,0px) + 76px);width:100px;height:145px;border-radius:18px;background:linear-gradient(135deg,#bca1bd,#40374e);border:1px solid #ffffff66;display:grid;place-items:center;box-shadow:0 5px 20px #0004;touch-action:none}.selfview small{font-size:11px}.floatmsgs{position:absolute;left:15px;bottom:145px;max-width:78%;display:flex;flex-direction:column;gap:8px;text-shadow:0 2px 4px #000;pointer-events:none}.floatmsg{font-size:13px;background:#0005;padding:8px 10px;border-radius:13px;animation:fade 6s forwards}@keyframes fade{0%,70%{opacity:1}100%{opacity:0}}.message-send{display:flex;gap:8px;padding:0 15px 10px}.message-send input{flex:1;min-width:0;background:#ffffff25;border:1px solid #ffffff35;border-radius:22px;padding:11px 14px;color:white;outline:none}.message-send button{background:#fff;color:#222;border-radius:50%;width:42px}.video-controls{display:flex;justify-content:center;gap:17px;padding:15px 10px 25px}.video-controls .round{width:53px;height:53px;background:#ffffff32;font-size:20px}.video-controls .hang{background:#ff453a}.sheet{position:absolute;inset:0;background:#f8f8fb;z-index:55;color:#111;display:none;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px}.sheet.show{display:block}.sheet .close{float:right;background:#e7e7eb;color:#222;border-radius:20px;padding:8px 13px}.sheet .bigavatar{width:95px;height:95px;border-radius:50%;margin:40px auto 15px}.sheet h2{text-align:center}.sheet p{text-align:center;color:#777}.emptyhint{font-size:12px;color:#888;text-align:center;padding:24px}.toast{position:absolute;top:55px;left:50%;transform:translateX(-50%);padding:10px 14px;background:#222;color:white;border-radius:20px;z-index:100;font-size:12px;display:none}.toast.show{display:block}.passcode{position:absolute;inset:0;z-index:50;display:none;flex-direction:column;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 30px) 30px calc(env(safe-area-inset-bottom,0px) + 28px);background:rgba(15,16,25,.94);backdrop-filter:blur(24px);color:#fff;text-align:center}.passcode.show{display:flex}.passcode-back{align-self:flex-start;background:transparent;color:#fff;font-size:15px;padding:8px 0}.passcode-title{font-size:24px;font-weight:650;margin-top:42px}.passcode-subtitle{font-size:13px;color:#ddd;margin-top:10px}.passcode-dots{display:flex;gap:18px;margin:28px 0 8px}.passcode-dots i{width:12px;height:12px;border:1.5px solid #fff;border-radius:50%}.passcode-dots i.filled{background:#fff}.passcode-error{height:20px;color:#ff8e9a;font-size:12px;margin:2px 0 16px}.passcode-grid{display:grid;grid-template-columns:repeat(3,70px);gap:13px 22px;margin-top:auto;margin-bottom:18px}.passcode-grid button{width:70px;height:70px;border-radius:50%;background:#ffffff1b;border:1px solid #ffffff28;color:#fff;font-size:27px;font-weight:400}.passcode-grid button:active{background:#ffffff4a}.passcode-grid .passcode-empty{visibility:hidden}.passcode-grid .passcode-delete{font-size:13px;background:transparent;border:0}@media(min-width:600px){.phone{max-width:430px;height:min(900px,100dvh);margin:auto;border-radius:36px;border:5px solid #333}.phone .wallpaper{border-radius:30px}.screen{border-radius:30px}.homebar{bottom:12px}}
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+ <div class="wallpaper"></div>
+ <div class="status"><span id="statusTime">9:41</span><span>●●●  ▰  ▰</span></div>
+ <section class="lock" id="lock"><div class="clock" id="clock">09:41</div><div class="date" id="date">星期五，10月23日</div><div class="locknote">🔒　有 2 条新通知</div><div class="unlock">轻点屏幕或向上滑动以解锁</div></section>
+ <section id="passcode" class="passcode" aria-label="输入锁屏密码"><button class="passcode-back" id="passcodeBack">取消</button><div class="passcode-title">输入密码</div><div class="passcode-subtitle">输入密码以解锁这部 iPhone</div><div class="passcode-dots" id="passcodeDots"><i></i><i></i><i></i><i></i></div><div class="passcode-error" id="passcodeError">请输入密码</div><div class="passcode-grid" id="passcodeGrid"><button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button><button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button><button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button><button type="button" class="passcode-empty" disabled></button><button type="button" data-digit="0">0</button><button type="button" id="passcodeDelete" class="passcode-delete">删除</button></div></section>
+ <section class="screen home" id="home">
+  <div class="widgets">
+   <div class="widget"><small>天气 · 首尔</small><div class="temp">18° ☁️</div><div style="font-size:12px">多云　最高 21° / 最低 13°</div></div>
+   <div class="widget"><small>今天的日程</small><div class="event"><b>14:00</b><span>练习室见面</span></div><div class="event"><b>20:30</b><span>记得给我发消息</span></div></div>
+  </div>
+  <div class="apps">
+   <button class="app" data-open="phoneapp"><span class="app-icon phoneapp">☎</span><span>电话</span></button>
+   <button class="app" data-open="kakao"><span class="app-icon kakao">●</span><span>KakaoTalk</span></button>
+   <button class="app" data-open="instagram"><span class="app-icon instagram">◎</span><span>Instagram</span></button>
+   <button class="app" data-open="xapp"><span class="app-icon xapp">𝕏</span><span>X</span></button>
+   <button class="app" data-open="weverse"><span class="app-icon weverse">W</span><span>Weverse</span></button>
+   <button class="app" data-open="fromm"><span class="app-icon fromm">♡</span><span>Fromm</span></button>
+   <button class="app" data-open="photos"><span class="app-icon">🌄</span><span>照片</span></button>
+   <button class="app" data-open="notes"><span class="app-icon">📝</span><span>备忘录</span></button>
+  </div>
+  <div class="dock">
+   <button class="app" data-open="phoneapp"><span class="app-icon phoneapp">☎</span></button>
+   <button class="app" data-open="kakao"><span class="app-icon kakao">●</span></button>
+   <button class="app" data-open="weverse"><span class="app-icon weverse">W</span></button>
+   <button class="app" data-open="fromm"><span class="app-icon fromm">♡</span></button>
+  </div>
+ </section>
+ <section class="screen appscreen" id="instagramFeed" style="background:#fff;color:#17171b">
+  <div class="apphead"><span>Instagram</span><span>＋　♡　✉</span></div>
+  <div style="padding:0 16px 10px;font-size:11px;color:#999">粉丝创作情节模拟 · 非真实动态</div>
+  <div class="profile-row"><div class="avatar" style="background:linear-gradient(135deg,#dca5b7,#6b628d)">星</div><div><strong>hwa._official</strong><div class="subtle">练习室 · 2小时前</div></div><span style="margin-left:auto">•••</span></div>
+  <div style="height:230px;margin:0 12px;border-radius:14px;background:linear-gradient(145deg,#242339,#746075 55%,#d7a6ac);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px"><div style="font-size:20px;line-height:1.7">“顺手买的两杯咖啡”<br><span style="font-size:12px;opacity:.8">照片里有两杯，一杯无糖，一杯加了很多冰</span></div></div>
+  <div style="padding:12px 18px;font-size:13px"><b>♡ 128,402</b><p>hwa._official 今天有人说，天气冷的时候要把手放进口袋里。可是我的口袋，好像总有人比我先占好位置。</p><span style="color:#999">查看全部 2,418 条评论</span></div>
+  <div class="profile-row"><div class="avatar" style="background:linear-gradient(135deg,#e0a47e,#8b5b4f)">旼</div><div><strong>mingi.archive</strong><div class="subtle">Seoul, Korea · 昨天</div></div><span style="margin-left:auto">•••</span></div>
+  <div style="height:210px;margin:0 12px;border-radius:14px;background:linear-gradient(145deg,#1e2028,#8c746d 58%,#d8b5a0);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px"><div style="font-size:18px;line-height:1.8">一张模糊的夜路照片<br><span style="font-size:12px;opacity:.8">画面边缘露出熟悉的黑色袖口</span></div></div>
+  <div style="padding:12px 18px;font-size:13px"><b>♡ 96,821</b><p>mingi.archive 有些地方不需要定位，因为有人会在那里等我。</p><span style="color:#999">评论里有人问：是同一个人吗？</span></div>
+  <div style="padding:12px 18px 90px"><button onclick="startIncoming()" style="width:100%;padding:13px;border-radius:14px;background:#d62976;color:white;font-weight:700">▶ 模拟收到 Instagram 视频来电</button></div>
+  <div class="bottomtabs"><span><b>⌂</b>首页</span><span><b>⌕</b>搜索</span><span><b>＋</b>发布</span><span><b>♡</b>活动</span><span><b>♙</b>主页</span></div>
+ </section>
+ <section class="screen appscreen" id="phoneapp">
+  <div class="apphead"><span>最近通话</span><span style="color:#1685ff;font-size:14px">编辑</span></div><div class="rows calllist" id="calls"></div>
+  <div class="bottomtabs"><span><b>★</b>个人收藏</span><span><b>◷</b>最近通话</span><span><b>♙</b>通讯录</span><span><b>⌨</b>拨号键盘</span></div>
+ </section>
+ <section class="screen appscreen" id="kakao">
+  <div class="apphead"><span>我的</span><span>＋　⚙</span></div><div id="kakaoProfile"></div><div class="rows" id="friends"></div>
+  <div class="bottomtabs"><span><b>♙</b>我的</span><span><b>▤</b>聊天</span><span><b>◉</b>오픈채팅</span><span><b>⋯</b>更多</span></div>
+ </section>
+ <section class="screen chat-screen" id="chatroom">
+  <div class="chat-top"><button onclick="openApp('kakao')" style="background:none;color:#222">‹</button><div class="avatar" id="chatAvatar">C</div><span id="chatTitle">宝宝</span><span style="margin-left:auto">☰</span></div>
+  <div class="messages" id="chatMessages"></div><div class="chat-input"><input id="chatInput" placeholder="输入消息…"><button class="send" id="chatSend">发送</button></div>
+ </section>
+ <section class="screen appscreen dark" id="xapp">
+  <div class="apphead"><span>𝕏</span><span style="font-size:15px">⌕　⋯</span></div><div style="padding:0 18px 10px;color:#999;font-size:11px">剧情档案：疑似恋情讨论帖（虚构同人，不是真实爆料）</div>
+  <div style="height:118px;background:linear-gradient(135deg,#27233b,#846579,#d0a2a5)"></div>
+  <div style="padding:0 18px 15px;border-bottom:1px solid #292929"><div class="avatar" style="width:70px;height:70px;border:4px solid #050505;margin-top:-35px">♡</div><h2 style="font-size:19px;margin:9px 0 2px">匿名舆情观察 🔒</h2><div class="subtle">@nightarchive_</div><p style="font-size:13px;margin:12px 0">同人剧情模拟区 · 所有帖子均为虚构创作，不是真实爆料。</p><div class="subtle">关注中 128　关注者 96</div></div>
+  <div id="tweets"></div>
+  <div class="bottomtabs" style="background:#050505;border-color:#292929;color:#aaa"><span><b>⌂</b>主页</span><span><b>⌕</b>搜索</span><span><b>♧</b>通知</span><span><b>✉</b>私信</span></div>
+ </section>
+ <section class="screen appscreen" id="weverse">
+  <div class="apphead"><span>Weverse</span><span>⌕　♙</span></div><div style="padding:0 18px;color:#777;font-size:12px">社区 · 关注中 · 粉丝创作模拟</div>
+  <div class="community-card"><div style="display:flex;align-items:center;gap:10px"><div class="avatar">♡</div><div><strong>오늘도 너를 생각해</strong><div class="subtle">官方社区 · 2小时前</div></div></div><p>今天也辛苦啦。最近学会了一件事：有些珍贵的心情，不一定要说得很大声。希望你们都能好好休息 🫶</p><div class="postfoot"><span>♡ 2.4万</span><span>💬 318</span><span>↗ 分享</span></div></div>
+  <div class="community-card"><div style="display:flex;align-items:center;gap:10px"><div class="avatar">J</div><div><strong>J</strong><div class="subtle">刚刚 · 粉丝动态</div></div></div><p>有人说，想去海边的时候就去吧。我想，等有空了，应该会和重要的人一起去。</p><div class="postfoot"><span>♡ 860</span><span>💬 24</span></div></div>
+  <div class="bottomtabs"><span><b>⌂</b>首页</span><span><b>♧</b>社区</span><span><b>▣</b>媒体</span><span><b>♙</b>我的</span></div>
+ </section>
+ <section class="screen appscreen" id="fromm" style="background:#fff7f8">
+  <div class="apphead"><span>Fromm</span><span>⋯</span></div><div style="padding:0 16px 8px;color:#999;font-size:11px">粉丝创作模拟内容 · 非真实私信</div><div class="profile-row" style="padding-top:8px"><div class="avatar" style="background:#e9b7c9">♡</div><div style="flex:1"><strong id="frommTitle">朴星化</strong><div class="subtle" id="frommStatus">现在在线 · Fromm</div></div></div><div id="frommSwitch" style="display:flex;gap:8px;padding:8px 16px 4px"><button onclick="switchFromm('朴星化')" style="border-radius:18px;padding:8px 12px;background:#f2c8d7;color:#713c51">朴星化</button><button onclick="switchFromm('宋旼琦')" style="border-radius:18px;padding:8px 12px;background:#eee;color:#555">宋旼琦</button></div><div class="messages" id="frommMessages" style="padding:18px 18px 80px"></div><div class="chat-input"><input id="frommInput" placeholder="给他发一条消息…"><button class="send" id="frommSend">发送</button></div>
+ </section>
+ <section class="screen appscreen" id="photos"><div class="apphead">照片</div><div class="emptyhint">这里还没有照片</div></section>
+ <section class="screen appscreen" id="notes"><div class="apphead">备忘录</div><div class="emptyhint">今天也要记得想你。</div></section>
+ <div class="call-overlay" id="incoming">
+  <div class="caller-avatar" id="callerAvatar">C</div><h2 id="callerName">你的特别来电</h2><p>Instagram 视频通话</p><p style="margin-top:15px">来电中…</p>
+  <div class="call-actions"><div><button class="round hang" id="decline">✕</button><div style="font-size:12px;margin-top:9px">拒绝</div></div><div><button class="round answer" id="answer">☎</button><div style="font-size:12px;margin-top:9px">接听</div></div></div>
+ </div>
+ <div class="video-call" id="videoCall">
+  <div class="video-backdrop"></div><div class="video-head"><strong id="videoName">特别来电</strong><span id="duration" style="font-size:12px">00:00</span></div>
+  <div class="selfview" id="selfview"><span>我的画面</span></div><div class="floatmsgs" id="floatmsgs"></div>
+  <div class="message-send"><input id="callMessage" placeholder="发消息…"><button id="sendCallMessage">➤</button></div>
+  <div class="video-controls"><button class="round" id="flip">↻</button><button class="round" id="mic">🎙</button><button class="round" id="camera">▣</button><button class="round hang" id="endCall">✕</button></div>
+ </div>
+ <div class="sheet" id="profileSheet"><button class="close" id="closeProfile">完成</button><div class="avatar bigavatar">♡</div><h2 id="sheetName">小狗</h2><p>有些人只要在身边，就很好。</p><div class="community-card">状态　在线</div><div class="community-card">备注　我的特别的人</div></div>
+ <div class="toast" id="toast"></div>
+ <div class="homebar" id="homebar"></div>
+</div>
+<script>
+/* 虚构同人剧情配置：以下为粉丝创作模拟内容，不代表艺人真实私生活或真实社交账号。 */
+const CONFIG = {
+ wallpaper: "",
+ userName: "经纪人手机",
+ contactName: "朴星化",
+ twitterHandle: "nightarchive_",
+ weather: { place: "首尔", temp: "13°", desc: "夜间多云", high: "18°", low: "9°" },
+ events: [{time:"16:30",title:"公司会议：注意舆情"},{time:"23:40",title:"不要忘记把手机还回去"}],
+ calls: [
+  {group:"今天 · 未接来电",items:[{name:"朴星化",type:"未接",time:"上午 01:17",count:"2"},{name:"宋旼琦",type:"未接",time:"上午 01:12",count:"1"}]},
+  {group:"昨天 · 深夜",items:[{name:"朴星化",type:"收",time:"晚上 23:46",count:"3"},{name:"宋旼琦",type:"发",time:"晚上 23:21",count:"1"}]},
+  {group:"经纪人工作记录",items:[{name:"公关组",type:"收",time:"昨天 18:02",count:"1"}]}
+ ],
+ chats: {
+  "朴星化": {title:"朴星化",subtitle:"最后在线 01:17",messages:[
+   {from:"朴星化",time:"23:08",text:"你到宿舍了吗？外面风很大。"},{from:"宋旼琦",time:"23:09",text:"到了。你呢？别又一个人留下来练习。"},{from:"朴星化",time:"23:10",text:"我只是想把今天再拖长一点。"},{from:"宋旼琦",time:"23:10",text:"今天已经结束了，哥。"},{from:"朴星化",time:"23:11",text:"我知道。可是结束以后，就不能光明正大地找你了。"},{from:"宋旼琦",time:"23:12",text:"你可以找我。只是别在有人的地方叫我的名字。"},{from:"朴星化",time:"23:13",text:"有时候我会想，如果我们不是现在的身份，会不会简单一点。"},{from:"宋旼琦",time:"23:14",text:"不要这样想。你一这样说，我就不知道该怎么安慰你。"},{from:"朴星化",time:"23:15",text:"那就不用安慰。告诉我你也想我。"},{from:"宋旼琦",time:"23:15",text:"……我想你。比你以为的还要多。"}]},
+  "宋旼琦": {title:"宋旼琦",subtitle:"最后在线 01:12",messages:[
+   {from:"宋旼琦",time:"00:31",text:"哥，今天你为什么在镜头前一直看我？"},{from:"朴星化",time:"00:32",text:"我没有。"},{from:"宋旼琦",time:"00:32",text:"你每次说没有的时候，都特别明显。"},{from:"朴星化",time:"00:33",text:"那你为什么不躲开？"},{from:"宋旼琦",time:"00:34",text:"因为我也想看你。"},{from:"朴星化",time:"00:35",text:"旼琦啊，最近是不是很累？"},{from:"宋旼琦",time:"00:35",text:"有一点。最累的是明明就在你旁边，还要装作什么都没有。"},{from:"朴星化",time:"00:36",text:"对不起。"},{from:"宋旼琦",time:"00:37",text:"不要道歉。我只是偶尔会贪心，想要一个不用看时间、也不用确认门有没有关好的晚上。"},{from:"朴星化",time:"00:38",text:"等这阵子过去，我带你去海边。没有工作人员，没有镜头。"},{from:"宋旼琦",time:"00:39",text:"你每次都这样答应我。"},{from:"朴星化",time:"00:39",text:"这次也是真的。"}]},
+  "公关小群": {title:"危机公关｜仅三人",subtitle:"朴星化、宋旼琦、经纪人",messages:[
+   {from:"经纪人",time:"01:24",text:"先说正事。网上出现了关于你们的帖子，有人在整理同款、时间线和后台动线。"},{from:"朴星化",time:"01:25",text:"先别让旼琦看。"},{from:"宋旼琦",time:"01:25",text:"我已经看到了。"},{from:"经纪人",time:"01:26",text:"以后不要在公开照片里留下能对应的细节。不是叫你们互相躲着，是要保护彼此。"},{from:"宋旼琦",time:"01:27",text:"如果有人问，我们还是说是队友，对吗？"},{from:"经纪人",time:"01:27",text:"对外只谈工作，不回应未经证实的私生活猜测。不要私下和账号争论，也别让任何人去扒具体行程。"},{from:"朴星化",time:"01:28",text:"知道了。需要删掉什么你直接告诉我。"},{from:"经纪人",time:"01:29",text:"我会整理一份公开内容检查清单。你们先休息，别在凌晨继续发东西。"},{from:"宋旼琦",time:"01:30",text:"哥，你是不是觉得后悔了？"},{from:"朴星化",time:"01:30",text:"没有。"},{from:"经纪人",time:"01:31",text:"……这句别在群里聊。明天当面说。"},{from:"宋旼琦",time:"01:31",text:"好。"}]}
+ },
+ tweets: [
+  {user:"@late_night",name:"夜航记录员",time:"2分钟",text:"有人发现今天后台结束后，两个人前后脚离开。先说清楚：时间线不等于证据，别去追车、蹲酒店或公开私人信息。"},
+  {user:"@bluehour_ate",name:"blue hour",time:"8分钟",text:"同款戒指、同一首歌、差不多时间发的夜景……我只是觉得巧合有点多。但也可能只是队友关系好，别替本人下结论。"},
+  {user:"@dont_cross_line",name:"请停止跟踪",time:"12分钟",text:"把私人行程拼成时间线真的很越界。喜欢他们就看舞台，不要把疑似恋爱当成追踪任务。"},
+  {user:"@starrywish",name:"星星存档",time:"17分钟",text:"如果他们真的喜欢彼此，希望他们能被温柔对待。无论答案是什么，都希望他们平安、开心。"},
+  {user:"@receipt_hunter",name:"线索整理中",time:"21分钟",text:"整理一下：同款物品、歌词引用、直播时的反应。但我不会放私人地址、航班或未经同意的照片，大家理性讨论。"},
+  {user:"@angry_fan",name:"失望的人",time:"25分钟",text:"如果是真的，我会很难接受。投入了这么多感情，突然看到这些暗示很复杂。希望他们至少别拿粉丝的感情开玩笑。"},
+  {user:"@soft_mingi",name:"旼琦的月亮",time:"31分钟",text:"你可以失望，但不能辱骂、威胁或去骚扰他们。艺人也是人，私生活不是粉丝投票决定的。"},
+  {user:"@timeline_404",name:"时间线研究员",time:"36分钟",text:"有人说他们引用了对方前一天的回答。这个细节确实很像呼应，但也可能只是同一个话题。没有当事人确认，就只能叫猜测。"},
+  {user:"@protect_their_space",name:"给他们一点空间",time:"42分钟",text:"求大家不要继续挖私人账号、家人和住处。公开内容可以讨论，私人信息不要传播。"},
+  {user:"@maybe_just_friends",name:"也许只是朋友",time:"49分钟",text:"我觉得大家把普通互动过度解读了。队友之间亲近很正常，不要把每个眼神都剪成恋爱证据。"},
+  {user:"@wish_u_well",name:"愿你们都好",time:"1小时",text:"不管是真是假，都希望他们能拥有一点不被围观的生活。祝福不需要知道全部细节。"},
+  {user:"@anonymous_post",name:"匿名投稿搬运",time:"1小时",text:"热帖：‘这不是第一次了吧？’评论区吵成一团。提醒：网传内容未经证实，请不要当作事实转发。"},
+  {user:"@sourgrapes",name:"路过的账号",time:"1小时",text:"某些人真的很会营业吧，别什么都嗑。"},
+  {user:"@moonlit_pair",name:"月色同频",time:"2小时",text:"我只记得他说‘有人会等我’，另一个人隔天说‘我会回去’。是不是呼应不知道，但故事感真的太强了。"},
+  {user:"@quietly_support",name:"安静支持",time:"2小时",text:"请不要要求他们公开，也不要要求他们否认。没有人有义务把自己的感情交给互联网审判。"}
+ ],
+ instagram: { callerName:"朴星化", avatar:"", video:"", messages:[
+  {from:"朴星化",text:"你是不是又在看那些帖子？",delay:3},{from:"我",text:"没有。只是想确认你有没有回宿舍。",delay:5},{from:"朴星化",text:"我到了。你别一个人扛着。",delay:5},{from:"我",text:"那你也别总是先担心我。",delay:4},{from:"朴星化",text:"因为我没办法不担心你。",delay:6},{from:"我",text:"……哥，明天见面的时候，不要装作不认识我太久。",delay:5},{from:"朴星化",text:"我尽量。再多看你一秒，可以吗？",delay:5}
+ ]},
+ fromm: {
+  "朴星化":[{from:"对方",text:"今天的风很大，回去的时候把外套拉好。"},{from:"对方",text:"有人问我最近为什么总在听同一首歌。"},{from:"对方",text:"因为有人说那首歌的最后一句，像是在等一个不会马上出现的人。"},{from:"对方",text:"你吃饭了吗？不要只回我一个表情。"},{from:"我",text:"吃了。哥，你今天也要早点睡。"},{from:"对方",text:"你昨天说‘回去就好了’。我一直在想这句话。"},{from:"对方",text:"有时候回去不是一个地方，是一个人。"}],
+  "宋旼琦":[{from:"对方",text:"今天有人问我，最近最想去哪里。"},{from:"对方",text:"我说海边。其实想去的是你答应过我的那个海边。"},{from:"对方",text:"哥说，风大的时候要把手放进口袋。"},{from:"对方",text:"可是我想要的不是口袋，是有人牵住我。"},{from:"我",text:"你又开始写这种让人不知道怎么回复的话了。"},{from:"对方",text:"那你不用回复。只要你知道我说的是谁。"},{from:"对方",text:"今天也辛苦了。早点睡，明天见面的时候再看我。"}]
+ }
+};
+
+const $=id=>document.getElementById(id);
+let currentApp="home", currentContact=CONFIG.contactName, callTimer=null, callSeconds=0, messageTimers=[];
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1600)}
+function updateClock(){let d=new Date();$('clock').textContent=d.toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit',hour12:false});$('statusTime').textContent=$('clock').textContent;$('date').textContent=d.toLocaleDateString('zh-CN',{weekday:'long',month:'long',day:'numeric'})}
+setInterval(updateClock,1000);updateClock();
+if(CONFIG.wallpaper){document.querySelectorAll('.wallpaper').forEach(x=>x.style.background=`center/cover no-repeat url("${CONFIG.wallpaper}")`)}
+function setConfigText(){document.querySelector('.widgets .widget small').textContent='天气 · '+CONFIG.weather.place;document.querySelector('.temp').textContent=CONFIG.weather.temp+' ☁️';document.querySelector('.widgets .widget div:nth-child(3)').textContent=CONFIG.weather.desc+'　最高 '+CONFIG.weather.high+' / 最低 '+CONFIG.weather.low;let ev=document.querySelectorAll('.event');CONFIG.events.slice(0,2).forEach((e,i)=>{if(ev[i]){ev[i].innerHTML='<b>'+e.time+'</b><span>'+e.title+'</span>'}});$('sheetName').textContent=CONFIG.userName;$('callerName').textContent=CONFIG.instagram.callerName;$('videoName').textContent=CONFIG.instagram.callerName;$('twitterHandle');document.querySelector('#xapp h2').textContent='经纪人手机里的匿名账号 🔒';document.querySelector('#xapp .subtle').textContent='虚构同人舆情时间线 · 非真实爆料';}
+function openApp(id){if(id==='instagram'){id='instagramFeed'}document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));$('lock').style.display='none';$('home').style.display='none';$(id).classList.add('active');currentApp=id;if(id==='kakao')renderKakao();if(id==='phoneapp')renderCalls();if(id==='xapp')renderTweets();if(id==='fromm')renderFromm();$('homebar').style.display='block'}
+function goHome(){if($('incoming').classList.contains('show'))$('incoming').classList.remove('show');if($('videoCall').classList.contains('show'))endVideoCall();$('profileSheet').classList.remove('show');document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));$('home').style.display='block';$('lock').style.display='none';currentApp='home';$('homebar').style.display='block'}
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>openApp(b.dataset.open)));
+$('homebar').addEventListener('click',goHome);
+let enteredCode='';
+function showPasscode(){if($('lock').style.display==='none')return;$('passcode').classList.add('show');enteredCode='';updatePasscodeDots();$('passcodeError').textContent='请输入密码'}
+function updatePasscodeDots(){$('passcodeDots').querySelectorAll('i').forEach((dot,i)=>dot.classList.toggle('filled',i<enteredCode.length))}
+function unlockPhone(){ $('passcode').classList.remove('show');$('lock').style.display='none';$('home').style.display='block';$('homebar').style.display='block';enteredCode='';updatePasscodeDots() }
+function enterDigit(d){if(enteredCode.length>=4)return;enteredCode+=d;updatePasscodeDots();if(enteredCode.length===4){if(enteredCode==='0803'){setTimeout(unlockPhone,160)}else{ $('passcodeError').textContent='密码错误，请重试';setTimeout(()=>{enteredCode='';updatePasscodeDots()},450)}}}
+document.querySelectorAll('[data-digit]').forEach(b=>b.addEventListener('click',()=>enterDigit(b.dataset.digit)));
+$('passcodeDelete').addEventListener('click',()=>{enteredCode=enteredCode.slice(0,-1);updatePasscodeDots();$('passcodeError').textContent=''});
+$('passcodeBack').addEventListener('click',()=>{$('passcode').classList.remove('show');enteredCode='';updatePasscodeDots()});
+let startY=0;document.addEventListener('touchstart',e=>{startY=e.touches[0].clientY},{passive:true});document.addEventListener('touchend',e=>{if($('lock').style.display!=='none'&&startY-e.changedTouches[0].clientY>40)showPasscode()},{passive:true});$('lock').addEventListener('click',showPasscode);
+function renderCalls(){$('calls').innerHTML=CONFIG.calls.map(g=>`<div style="padding:17px 0 6px;color:#777;font-size:12px">${g.group}</div>`+g.items.map(c=>`<div class="rowitem"><div style="font-size:22px;color:${c.type==='未接'?'#ff3b30':'#1685ff'}">${c.type==='未接'?'↙':'↗'}</div><div class="grow"><strong class="${c.type==='未接'?'missed':''}">${c.name||CONFIG.contactName}</strong><p>${c.type==='未接'?'未接来电':c.type==='收'?'来电':'呼出'} ${c.count&&c.count!=='1'?'('+c.count+')':''}</p></div><span class="subtle">${c.time}</span><span style="color:#1685ff">ⓘ</span></div>`).join('')).join('')}
+function avatar(name){return `<div class="avatar">${(name||'?').slice(0,1)}</div>`}
+function renderKakao(){
+ $('kakaoProfile').innerHTML=`<div class="profile-row" id="myProfile" style="cursor:pointer">${avatar(CONFIG.userName)}<div style="flex:1"><strong>${CONFIG.userName}</strong><div class="subtle">误拿的手机 · 请勿外传</div></div><span>▣</span></div>`;
+ $('myProfile').onclick=()=>$('profileSheet').classList.add('show');
+ $('friends').innerHTML=`<div style="padding:17px 0 8px;color:#777;font-size:12px">聊天（3）</div>`+Object.entries(CONFIG.chats).map(([name,c])=>`<div class="rowitem chat-entry" data-chat="${name}" style="cursor:pointer">${avatar(name)}<div class="grow"><strong>${name}</strong><p>${escapeHtml(c.messages[c.messages.length-1].text)}</p></div><span class="subtle">${c.messages[c.messages.length-1].time}</span></div>`).join('');
+ document.querySelectorAll('.chat-entry').forEach(el=>el.onclick=()=>openChat(el.dataset.chat));
+}
+$('closeProfile').onclick=()=>$('profileSheet').classList.remove('show');
+function openChat(name){currentContact=name;const room=CONFIG.chats[name];$('chatTitle').textContent=room.title;$('chatAvatar').textContent=name.slice(0,1);$('chatMessages').innerHTML=room.messages.map(m=>bubble(m.text,m.time,m.from,name)).join('');openApp('chatroom');$('chatroom').classList.add('active');$('chatroom').scrollTop=$('chatMessages').scrollHeight}
+function bubble(text,time,from,roomName){let mine=(from==='经纪人手机'||from==='我');let cls=mine?'mine':'theirs';let bg=from==='经纪人'?'#fff':'#fee500';return `<div class="bubble-wrap ${cls}" style="align-self:${mine?'flex-end':'flex-start'};flex-direction:${mine?'row':'row-reverse'}"><span class="meta">${time||''}</span><div class="bubble" style="background:${mine?'#fff':'#fee500'};border-radius:${mine?'4px 16px 16px 16px':'16px 4px 16px 16px'}">${from&&from!=='我'&&from!=='经纪人手机'?`<small style="display:block;color:#6b6b6b;font-size:10px;margin-bottom:3px">${escapeHtml(from)}</small>`:''}${escapeHtml(text)}</div></div>`}
+function sendChat(){let v=$('chatInput').value.trim();if(!v)return;const room=CONFIG.chats[currentContact];room.messages.push({from:'经纪人手机',time:new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit',hour12:false}),text:v});$('chatMessages').insertAdjacentHTML('beforeend',bubble(v,room.messages[room.messages.length-1].time,'经纪人手机',currentContact));$('chatInput').value='';$('chatroom').scrollTop=$('chatMessages').scrollHeight}
+$('chatSend').onclick=sendChat;$('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat()});
+function renderTweets(){$('tweets').innerHTML=CONFIG.tweets.map((t,i)=>`<div class="tweet">${avatar(t.name)}<div class="tweetbody"><div class="tweethead"><strong>${escapeHtml(t.name)}</strong> <span style="color:#777">${escapeHtml(t.user)} · ${escapeHtml(t.time)}</span></div><div class="tweettext">${escapeHtml(t.text)}</div><div class="engage"><span>♡ ${[128,56,203,892,147][i%5]}</span><span>◌ ${[12,8,19,64,31][i%5]}</span><span>↗ ${[4,2,7,15,6][i%5]}</span></div></div></div>`).join('')}
+let currentFromm='朴星化';
+function switchFromm(name){currentFromm=name;$('frommTitle').textContent=name;$('frommStatus').textContent='粉丝创作模拟内容 · 非真实私信';renderFromm()}
+function renderFromm(){$('frommMessages').innerHTML=CONFIG.fromm[currentFromm].map(m=>`<div style="align-self:${m.from==='我'?'flex-end':'flex-start'};max-width:85%;background:${m.from==='我'?'#f5d6e1':'#fff'};color:#333;padding:11px 13px;border-radius:16px;margin-bottom:8px;box-shadow:0 2px 8px #00008;line-height:1.5">${escapeHtml(m.text)}</div>`).join('');$('frommMessages').scrollTop=$('frommMessages').scrollHeight}
+function sendFromm(){let v=$('frommInput').value.trim();if(!v)return;CONFIG.fromm[currentFromm].push({from:'我',text:v});renderFromm();$('frommInput').value=''}$('frommSend').onclick=sendFromm;$('frommInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendFromm()});
+function startIncoming(){goHome();$('callerName').textContent=CONFIG.instagram.callerName;$('callerAvatar').innerHTML=CONFIG.instagram.avatar?`<img src="${CONFIG.instagram.avatar}">`:escapeHtml(CONFIG.instagram.callerName.slice(0,1));$('incoming').classList.add('show')}
+function clearCallTimers(){messageTimers.forEach(clearTimeout);messageTimers=[];if(callTimer)clearInterval(callTimer);callTimer=null}
+$('decline').onclick=()=>{$('incoming').classList.remove('show');goHome()};
+$('answer').onclick=()=>{$('incoming').classList.remove('show');$('videoCall').classList.add('show');callSeconds=0;$('duration').textContent='00:00';$('floatmsgs').innerHTML='';clearCallTimers();callTimer=setInterval(()=>{callSeconds++;$('duration').textContent=String(Math.floor(callSeconds/60)).padStart(2,'0')+':'+String(callSeconds%60).padStart(2,'0')},1000);let delay=0;CONFIG.instagram.messages.forEach(m=>{delay+=Math.max(1,m.delay||3);messageTimers.push(setTimeout(()=>addFloatMessage(m.from,m.text),delay*1000))})};
+function addFloatMessage(from,text){let d=document.createElement('div');d.className='floatmsg';d.textContent=(from==='我'?'我：':CONFIG.instagram.callerName+'：')+text;$('floatmsgs').appendChild(d);setTimeout(()=>d.remove(),6200)}
+$('sendCallMessage').onclick=()=>{let v=$('callMessage').value.trim();if(!v)return;addFloatMessage('我',v);$('callMessage').value=''};$('callMessage').addEventListener('keydown',e=>{if(e.key==='Enter')$('sendCallMessage').click()});
+function endVideoCall(){clearCallTimers();$('videoCall').classList.remove('show');goHome()}$('endCall').onclick=endVideoCall;
+$('flip').onclick=()=>toast('已切换镜头');$('mic').onclick=()=>{let b=$('mic');b.textContent=b.textContent==='🎙'?'🔇':'🎙';toast(b.textContent==='🔇'?'麦克风已关闭':'麦克风已开启')};$('camera').onclick=()=>{let b=$('camera');b.textContent=b.textContent==='▣'?'◻':'▣';toast('已切换相机状态')};
+let drag=null;$('selfview').addEventListener('pointerdown',e=>{drag={x:e.clientX-$('selfview').offsetLeft,y:e.clientY-$('selfview').offsetTop};$('selfview').setPointerCapture(e.pointerId)});$('selfview').addEventListener('pointermove',e=>{if(!drag)return;let el=$('selfview');el.style.left=Math.max(0,Math.min(innerWidth-el.offsetWidth,e.clientX-drag.x))+'px';el.style.top=Math.max(40,Math.min(innerHeight-el.offsetHeight-130,e.clientY-drag.y))+'px';el.style.right='auto'});$('selfview').addEventListener('pointerup',()=>drag=null);
+setConfigText();renderKakao();renderCalls();renderTweets();renderFromm();
+</script>
+</body>
+</html>
